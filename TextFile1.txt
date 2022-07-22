@@ -1,0 +1,5 @@
+Adding some text on TextFile1.txt to see how Git reacts.
+
+
+
+New text added!
