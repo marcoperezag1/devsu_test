@@ -14,7 +14,7 @@ public class TestBaseWeb {
 
     @BeforeSuite
     public void setUp() throws IOException {
-        System.setProperty("webdriver.chrome.driver", "/Users/marco/Desktop/devsu_proj/devsu/src/main/resources/chromedriver104");
+        System.setProperty("webdriver.chrome.driver", "/Users/marco/Desktop/devsu_proj/devsu_e2e/src/main/resources/chromedriver104");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String baseUrl = "https://www.demoblaze.com/";
