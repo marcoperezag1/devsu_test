@@ -1,31 +1,25 @@
 package Tests;
 
 import Pages.HomePage;
+import Pages.ProductPage;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class TestPurchase extends TestBaseWeb {
 
-    @DataProvider(name="contractData")
-    public Object[][] TestDataFeed(){
-        Object [][] data=new Object[2][4];
-        data[0][0]="99999999";
-        data[0][1]="Salta";
-        data[0][2]="+41";
-        data[0][3]="12345678";
-        data[1][0]="21021300";
-        data[1][1]="Buenos Aires";
-        data[1][2]="+41";
-        data[1][3]="87654321";
-        return data;
-    }
-
-    @Test(dataProvider="contractData")
-    public void checkContractWrongData(String birthday, String province, String phoneCode, String phoneNumber) throws Exception {
+    @Test
+    public void purchaseTwoProducts() throws Exception {
 
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.clickProductId1();
+        ProductPage productPage = PageFactory.initElements(driver, ProductPage.class);
+        homePage.addProductToCart(0);
+        productPage.clickAddToCart(0);
+        Thread.sleep(2000);
+        homePage.addProductToCart(1);
+        productPage.clickAddToCart(1);
+        Thread.sleep(2000);
+        driver.get("https://www.demoblaze.com/cart.html");
+        Thread.sleep(2000);
 
     }
 
