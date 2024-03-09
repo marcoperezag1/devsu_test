@@ -23,6 +23,14 @@ public class TestPurchase extends TestBaseWeb {
         driver.get("https://www.demoblaze.com/cart.html");
         Thread.sleep(2000);
         cartPage.clickPlaceOrderButton();
+        cartPage.setName("Marco");
+        cartPage.setCountry("Switzerland");
+        cartPage.setCity("Bern");
+        cartPage.setCard("BBVA");
+        cartPage.setMonth("March");
+        cartPage.setYear("2024");
+        cartPage.clickPurchaseButton();
+        Thread.sleep(2000);
 
     }
 
