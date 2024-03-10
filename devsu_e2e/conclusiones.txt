@@ -1,0 +1,3 @@
+POM means scalable and reusable.
+Automation enhances development efficiency and speed.
+Increases code coverage.

@@ -1,0 +1,2 @@
+Automation streamlines testing processes.
+Parametrization permit scalability and reusability of automated API tests.
